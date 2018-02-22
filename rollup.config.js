@@ -18,13 +18,13 @@ const plugins = [
 	}),
 	css({
 		output(sass) {
-			// const css = renderSync({
-			// 	data: sass
-			// }).css.toString()
-			// const source = ENV === 'production' ? minify(css).css : css
-			// const path = `./dist/vue-z-toast.${ENV_EXT}css`
+			const css = renderSync({
+				data: sass
+			}).css.toString()
+			const source = minify(css).css
+			const path = `./dist/index.min.css`
 
-			// writeFileSync(path, source)
+			writeFileSync(path, source)
 		}
 	}),
 	buble(),
