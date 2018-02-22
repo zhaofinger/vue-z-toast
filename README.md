@@ -10,6 +10,7 @@ vue的toast插件
 1. register
     ```javascript
     import VueZToast from 'vue-z-toast'
+    import 'vue-z-toast/dist/index.min.css'
     ...
     Vue.use(VueZToast)
     ````
