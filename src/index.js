@@ -18,6 +18,7 @@ VueZToast.install = (Vue, options) => {
 	 */
 	Vue.prototype.$toast = (message, duration = 2000) => {
 		instance.message = message
+		if (!message.trim()) return
 		instance.show = true
 		setTimeout(() => {
 			instance.show = false
