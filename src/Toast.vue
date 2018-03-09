@@ -1,7 +1,7 @@
 <template>
 	<transition name='fade'>
 		<div class='toast-wrapper' v-show='show'>
-			<div class='toast-content'>{{ message }}</div>
+			<div class='toast-content' :style='styleObj'>{{ message }}</div>
 		</div>
 	</transition>
 </template>
@@ -11,7 +11,8 @@
 		data() {
 			return {
 				show: false,
-				message: ''
+				message: '',
+				styleObj: {}
 			}
 		}
 	};
@@ -34,8 +35,6 @@
 		padding: 12px;
 		border-radius: 6px;
 		line-height: 1;
-		background: rgba(0, 0, 0, .4);
-		color: #ffffff;
 	}
 	.fade-enter-active, .fade-leave-active {
 		transition: opacity .4s;
