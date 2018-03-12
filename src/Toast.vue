@@ -29,7 +29,7 @@
 		justify-content: center;
 		align-items: center;
 		pointer-events: none;
-		z-index: 1000;
+		z-index: 999999;
 	}
 	.toast-content {
 		padding: 12px;
