@@ -20,6 +20,7 @@ VueZToast.install = (Vue, options) => {
 	Vue.prototype.$toast = (message, duration = 2000, styleObj = { color: '#FFFFFF', backgroundColor: 'rgba(0, 0, 0, .4)' }) => {
 		instance.message = message
 		instance.styleObj = styleObj
+		if (!message) return
 		if (!message.trim()) return
 		instance.show = true
 		setTimeout(() => {
