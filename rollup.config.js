@@ -7,9 +7,6 @@ import { renderSync } from 'node-sass'
 import babel from 'rollup-plugin-babel'
 import { minify } from 'csso'
 
-const ENV = process.env.NODE_ENV
-const MIN = 'min.'
-const ENV_EXT = ENV === 'production' ? MIN : ''
 
 const plugins = [
 	vue({
